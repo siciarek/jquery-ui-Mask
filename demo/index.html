@@ -17,7 +17,40 @@
 
 <h1>JaySic jQuery UI Mask Extension Demo Page</h1>
 
+<input type="button" value="Display default mask" onclick="displayDefaultLoader()" />
+
+<input type="button" value="Display customized mask" onclick="displayCustomizedLoader()" />
+
+
 <script type="text/javascript">
+
+    function displayDefaultLoader()
+    {
+        jQuery.ui.Mask.reset();
+        jQuery.ui.Mask.show();
+        setTimeout(function () {
+            jQuery.ui.Mask.hide();
+        }, 4000);
+    }
+
+    function displayCustomizedLoader()
+    {
+        var settings = {
+            id: 'myLoadingScreen',
+            loadingImg: 'images/ajax-loader.gif',
+            fgColor: 'red',
+            bgColor: 'yellow',
+            defaultMessage: 'Mary Had a Little Lamb'
+        };
+
+        jQuery.ui.Mask.reset();
+        var loader = jQuery.ui.Mask.new(settings);  // Customized layout
+        loader.show();
+
+        setTimeout(function () {
+            loader.hide();
+        }, 4000);
+    }
 
     $(document).ready(function () {
         var stop = true;
