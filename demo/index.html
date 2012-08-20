@@ -1,10 +1,51 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-    <title></title>
+    <title>JaySic jQuery UI Mask Extension Demo Page</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <link type="text/css" media="all" rel="stylesheet" href="main.css"/>
+    <link type="text/css" media="all" rel="stylesheet" href="jquery-ui-1.8.21.custom/css/smoothness/jquery-ui-1.8.21.custom.css"/>
+    <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.8.21.custom/js/jquery-ui-1.8.21.custom.min.js"></script>
+
+    <script type="text/javascript" src="../jquery.ui.Mask.js"></script>
 </head>
 <body>
+
+<h1>JaySic jQuery UI Mask Extension Demo Page</h1>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        var stop = true;
+
+        var settings = {
+            id: 'myLoadingScreen',
+            loadingImg: 'images/ajax-loader.gif',
+            fgColor: 'red',
+            bgColor: 'yellow',
+            defaultMessage: 'Hello, World!'
+        };
+
+        var loader = jQuery.ui.Mask.new(settings);  // Customized layout
+        loader.show();
+
+        setTimeout(function () {
+            loader.hide();
+
+            jQuery.ui.Mask.reset();
+            jQuery.ui.Mask.show('Hi, Alejandro!');
+            setTimeout(function () {
+                jQuery.ui.Mask.hide();
+            }, 4000);
+
+        }, 4000);
+    });
+
+</script>
 
 </body>
 </html>
