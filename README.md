@@ -16,7 +16,7 @@ Include script *after* the jQuery library and jQuery.ui script and css styleshee
 
 ## Demo page
 
-[http://siciarek.linuxpl.info/jquery-star-rating-plugin/demo/index.html](http://siciarek.linuxpl.info/jquery-star-rating-plugin/demo/index.html)
+[http://siciarek.linuxpl.info/jquery-ui-Mask/demo/index.html](http://siciarek.linuxpl.info/jquery-ui-Mask/demo/index.html)
 
 
 ## Usage
