@@ -82,7 +82,7 @@
             }
 
             if (bgcol != null) {
-                csssettings['background'] = bgcol;
+                csssettings['background-color'] = bgcol;
             }
 
             if (csssettings != {}) {
